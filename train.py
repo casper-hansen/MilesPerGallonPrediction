@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-
+import joblib
 
 from core.clean_data import CleanData
 from core.predict_data import PredictData
@@ -29,3 +29,5 @@ pred = predicter.predict(X_test, rf)
 score = predicter.score_r2(y_test)
 
 print(score)
+
+joblib.dump(rf, "models/rf_model.pkl")
