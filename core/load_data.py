@@ -17,3 +17,7 @@ class LoadData():
         df.columns = self.columns
 
         return df
+
+    def load_model_from_path(self, path):
+        model = pickle.load(open(path, 'rb'))
+        return model

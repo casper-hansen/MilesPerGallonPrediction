@@ -9,8 +9,8 @@ loader = LoadData()
 cleaner = CleanData()
 predicter = PredictData()
 
-@app.route("/")
-def hello():
+@app.route("/", methods=['POST'])
+def do_prediction():
     return "Hello World!"
 
 if __name__ == "__main__":
