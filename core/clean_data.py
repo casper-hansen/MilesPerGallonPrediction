@@ -5,6 +5,6 @@ class CleanData():
 
     def clear_question_marks(self, df):
         df = df[df['horsepower'] != '?']
-        df['horsepower'] = df['horsepower'].astype('float')
+        df.astype({"horsepower": float})
 
         return df
