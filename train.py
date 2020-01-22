@@ -14,7 +14,7 @@ df = loader.load_dataset_as_df()
 df = cleaner.clear_question_marks(df)
 
 y = df['mpg']
-X = df.drop(['mpg', 'car_name'], axis=1)
+X = cleaner.drop_unused_columns(df)
 
 X_train, X_test, y_train, y_test = train_test_split(
                                     X, y, 

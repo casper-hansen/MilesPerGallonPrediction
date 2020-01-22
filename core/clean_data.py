@@ -8,3 +8,6 @@ class CleanData():
         df.astype({"horsepower": float})
 
         return df
+
+    def drop_unused_columns(self, df):
+        return df.drop(['mpg', 'car_name'], axis=1)
