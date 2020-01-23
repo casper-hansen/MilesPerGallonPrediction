@@ -2,10 +2,10 @@
 ADDRESS=us.icr.io
 NAMESPACE=mlfromscratch
 REPOSITORY=auto
-VERSION=0.11
+VERSION=0.17
 
 docker build -t ${NAMESPACE}:${REPOSITORY} .
-ID="$(docker images | grep ${REPOSITORY} | head -n 1 | awk '{print $3}')"
+ID="$(docker images | grep ${NAMESPACE}:${REPOSITORY} | head -n 1 | awk '{print $3}')"
 
 docker tag ${ID} ${ADDRESS}/${NAMESPACE}/${REPOSITORY}:${VERSION}
 

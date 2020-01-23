@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: auto
-        image: us.icr.io/mlfromscratch/auto
+        image: us.icr.io/mlfromscratch/auto:0.17
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
