@@ -6,7 +6,7 @@ An example of input to Flask service in main.py:
 
 ```json
 {
-	"mpg":				18.0,
+    "mpg":				18.0,
     "cylinders":		8,
     "displacement": 	307.0,
     "horsepower":		130.0,
