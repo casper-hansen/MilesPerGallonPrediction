@@ -11,3 +11,6 @@ class CleanData():
 
     def drop_unused_columns(self, df):
         return df.drop(['mpg', 'car_name'], axis=1)
+
+    def drop_car_name(self, df):
+        return df.drop(['car_name'], axis=1)

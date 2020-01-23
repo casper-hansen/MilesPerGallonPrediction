@@ -15,7 +15,7 @@ def do_prediction():
     json = request.get_json()
     df = loader.json_to_df(json)
     df = cleaner.clear_question_marks(df)
-    X = cleaner.drop_unused_columns(df)
+    X = cleaner.drop_car_name(df)
 
     prediction = predicter.predict(X)
     return jsonify(prediction[0])

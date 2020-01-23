@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mpg
+  labels:
+    app: mpg
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mpg
+  template:
+    metadata:
+      labels:
+        app: mpg
+    spec:
+      containers:
+      - name: auto
+        image: us.icr.io/mlfromscratch/auto
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000

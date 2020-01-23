@@ -24,6 +24,5 @@ class LoadData():
 
     def json_to_df(self, json):
         df = pd.DataFrame(json, index=[0])
-        df.columns = self.columns
 
         return df
