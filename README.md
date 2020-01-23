@@ -6,14 +6,14 @@ An example of input to Flask service in main.py:
 
 ```json
 {
-    "mpg":				18.0,
-    "cylinders":		8,
-    "displacement": 	307.0,
-    "horsepower":		130.0,
-    "weight":			3504,
-    "acceleration": 	12.0,
-    "model_year":		70,
-    "origin":			1,
-    "car_name":			"chevrolet chevelle malibu"
+    "mpg": 18.0,
+    "cylinders": 8,
+    "displacement": 307.0,
+    "horsepower": 130.0,
+    "weight": 3504,
+    "acceleration": 12.0,
+    "model_year": 70,
+    "origin": 1,
+    "car_name": "chevrolet chevelle malibu"
 }
 ```
