@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 
 class LoadData():
     def __init__(self):
@@ -19,5 +20,10 @@ class LoadData():
         return df
 
     def load_model_from_path(self, path):
-        model = pickle.load(open(path, 'rb'))
-        return model
+        return joblib.load(path)
+
+    def json_to_df(self, json):
+        df = pd.DataFrame(json, index=[0])
+        df.columns = self.columns
+
+        return df
