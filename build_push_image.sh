@@ -1,12 +1,12 @@
 #!/bin/bash
-ADDRESS=us.icr.io
-NAMESPACE=mlfromscratch
+ADDRESS=gcr.io
+PROJECT_ID=macro-authority-266522
 REPOSITORY=auto
 VERSION=0.17
 
-docker build -t ${NAMESPACE}:${REPOSITORY} .
-ID="$(docker images | grep ${NAMESPACE}:${REPOSITORY} | head -n 1 | awk '{print $3}')"
+docker build -t ${PROJECT_ID}:${VERSION} .
+ID="$(docker images | grep ${REPOSITORY} | head -n 1 | awk '{print $3}')"
 
-docker tag ${ID} ${ADDRESS}/${NAMESPACE}/${REPOSITORY}:${VERSION}
+docker tag ${ID} $ADDRESS/${PROJECT_ID}/${REPOSITORY}:${VERSION}
 
-docker push ${ADDRESS}/${NAMESPACE}/${REPOSITORY}:${VERSION}
+docker push $ADDRESS/${PROJECT_ID}/${REPOSITORY}:${VERSION}
